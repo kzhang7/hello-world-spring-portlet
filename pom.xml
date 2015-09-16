@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<artifactId>lr_portlet_parent_pom</artifactId>
+		<groupId>com.ibx.frontoffice.salesportal</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.liferay.training</groupId>
+	<artifactId>hello-world-spring-portlet</artifactId>
+	<packaging>war</packaging>
+	<name>hello-world-spring-portlet Portlet</name>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<spring.version>3.0.7.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-bridges</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-taglib</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc-portlet</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>Liferay-v6.2-EE-(Tomcat-7)</id>
+			<properties>
+				<liferay.auto.deploy.dir>C:\liferay\LDS\liferay-portal-6.2-ee-sp11\deploy</liferay.auto.deploy.dir>
+				<liferay.app.server.deploy.dir>C:\liferay\LDS\liferay-portal-6.2-ee-sp11\tomcat-7.0.42\webapps</liferay.app.server.deploy.dir>
+				<liferay.app.server.lib.global.dir>C:\liferay\LDS\liferay-portal-6.2-ee-sp11\tomcat-7.0.42\lib\ext</liferay.app.server.lib.global.dir>
+				<liferay.app.server.portal.dir>C:\liferay\LDS\liferay-portal-6.2-ee-sp11\tomcat-7.0.42\webapps\ROOT</liferay.app.server.portal.dir>
+			</properties>
+		</profile>
+	</profiles>
+</project>
