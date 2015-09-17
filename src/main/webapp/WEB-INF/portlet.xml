@@ -15,8 +15,9 @@
             <window-state>normal</window-state>
         </supports>
         <portlet-info>
-            <title>Hello, World! (Spring)</title>
-            <short-title>Hello Spring</short-title>
+            <title>Hello World Spring</title>
+            <short-title>Hello World Spring</short-title>
+            <keywords>Hello World Spring</keywords>
         </portlet-info>
     </portlet>
 	

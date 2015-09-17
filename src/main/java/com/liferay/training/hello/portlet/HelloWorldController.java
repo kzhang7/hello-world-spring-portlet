@@ -1,6 +1,5 @@
 package com.liferay.training.hello.portlet;
 
-import javax.portlet.PortletPreferences;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
@@ -14,13 +13,6 @@ public class HelloWorldController {
 	@RequestMapping("VIEW")
 	@RenderMapping
 	public String view(RenderRequest request, RenderResponse response) {
-
-		PortletPreferences portletPreferences = request.getPreferences();
-		String name = "";
-
-		name = portletPreferences.getValue("name", "");
-
-		request.setAttribute("name", name);
 
 		return "view";
 	}
